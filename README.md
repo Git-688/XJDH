@@ -3,10 +3,10 @@
   <h1>⭐️ 星聚导航</h1>
   <p>小白的个人导航（Git开源项目+Cloudflare）</p>
 
-  ![GitHub Repo stars](https://img.shields.io/github/stars/Git-688/XLDH?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/Git-688/XLDH?style=social)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/Git-689/XLDH?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/Git-689/XLDH?style=social)
   ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxjdh688.ccwu.cc&label=网站状态)
-  ![License](https://img.shields.io/github/license/Git-688/XLDH)
+  ![License](https://img.shields.io/github/license/Git-689/XLDH)
   [![群](https://img.shields.io/badge/%E4%BC%81%E9%B9%85%E7%BE%A4-187780263-6BC5FF)](https://qun.qq.com/universal-share/share?ac=1&authKey=%2BP3qVBuKJpn3kIn5jBnlVFWx7S3Z%2Be0sD4KKmK4KTqqqQYjD8uQoNyhFMYRx3EXO&busi_data=eyJncm91cENvZGUiOiIxODc3ODAyNjMiLCJ0b2tlbiI6IlBkYzZ3TGlCK0ZLTWdyWEZLNExwOVZodHVycFRhT1A0L2swWUgxNDZrZ0c1WTFXL29jcVhJWk9uMWcwbnVPK3MiLCJ1aW4iOiIxNTk1MTI2NTM0In0%3D&data=b2ypnWVy3QPJUZq7msse4tlsICKy2GqgCLKOnfNwgdSHGsUxqHTfLoQmkwpQ2q61yXoOfKJsGRJ9DnG5cad8dA&svctype=4&tempid=h5_group_info)
 </div>
 
@@ -26,7 +26,6 @@
 - 💬 **Twikoo评论系统**：支持 LaTeX
 - 🌓 **深色模式**：适配深色主题，跟随系统或手动切换
 - 📱 **响应式设计**：适配桌面、平板、手机
-- 🔒 **安全检测**：网站投稿时自动执行 Google Safe Browsing + VirusTotal 双重检测
 - ⚡ **性能优化**：三级缓存（边缘缓存 + KV + 内存），静态资源 CDN 化，图片懒加载
 - 🛡️ **Cloudflare Access**：在边缘拦截未授权请求，隐藏源站IP，有效防御暴力破解和 DDoS攻击。
 
@@ -223,18 +222,18 @@ javascript window.APP_CONFIG={API_BASE:'https://api.xjdh688.ccwu.cc'};
 
 ## 📈 Star 历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Git-688/XLDH&type=Date)](https://star-history.com/#Git-688/XLDH&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Git-689/XLDH&type=Date)](https://star-history.com/#Git-689/XLDH&Date)
 
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)"
-          srcset="https://raw.githubusercontent.com/Git-688/Git-688/output/github-contribution-grid-snake-dark.svg">
+          srcset="https://raw.githubusercontent.com/Git-689/Git-689/output/github-contribution-grid-snake-dark.svg">
 
   <source media="(prefers-color-scheme: light)"
-          srcset="https://raw.githubusercontent.com/Git-688/Git-688/output/github-contribution-grid-snake.svg">
+          srcset="https://raw.githubusercontent.com/Git-689/Git-689/output/github-contribution-grid-snake.svg">
 
   <img
-      src="https://raw.githubusercontent.com/Git-688/Git-688/output/github-contribution-grid-snake.svg"
+      src="https://raw.githubusercontent.com/Git-689/Git-689/output/github-contribution-grid-snake.svg"
       width="100%">
 </picture>
 </div>
