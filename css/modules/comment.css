@@ -1,0 +1,80 @@
+/* comment.css - 评论模态框样式 */
+
+.twikoo-fallback {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-secondary, #999);
+    font-size: 13px;
+}
+
+#commentModal.feedback-modal .feedback-modal-content { padding: 0; }
+#commentModal.feedback-modal .feedback-modal-header {
+    padding: 10px 14px 8px;
+    margin: 0;
+}
+#commentModal.feedback-modal .feedback-modal-body { padding: 0 12px 12px; }
+#commentModal.feedback-modal #twikoo-comment { margin: 0; }
+
+#commentModal {
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 769px) {
+    #commentModal { display: flex; flex-direction: column; }
+    #commentModal .feedback-modal-content {
+        margin: auto 0;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    #commentModal {
+        padding-left: var(--container-padding-xs, 16px);
+        padding-right: var(--container-padding-xs, 16px);
+        padding-top: 60px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    #commentModal .feedback-modal-content {
+        margin: auto 0;
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #commentModal {
+        padding-left: var(--container-padding-xs, 16px);
+        padding-right: var(--container-padding-xs, 16px);
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    #commentModal .feedback-modal-content { max-height: calc(100vh - 70px); }
+}
+
+#commentModal .feedback-modal-content::-webkit-scrollbar { width: 4px; }
+#commentModal .feedback-modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .05);
+    border-radius: 4px;
+}
+#commentModal .feedback-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .2);
+    border-radius: 4px;
+}
+
+.dark-mode #commentModal .feedback-modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .05);
+}
+.dark-mode #commentModal .feedback-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .2);
+}

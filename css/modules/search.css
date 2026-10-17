@@ -1,0 +1,324 @@
+/* search.css - 精简版（搜索模态框位于导航栏下方，移动端间距与主页一致）
+   本次仅调整 .engine-dropdown 的定位，使其固定在引擎触发按钮正下方 */
+
+/* ===== 搜索模态框外壳 ===== */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: transparent;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, visibility .3s ease;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 20px 20px;           /* 顶部与导航栏底部对齐 */
+    box-sizing: border-box;
+}
+.search-modal.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ===== 模态框内容容器 ===== */
+.search-modal .modal-content {
+    width: 100%;
+    max-width: 560px;
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95) translateY(-10px);
+    opacity: 0;
+    transition: transform .3s cubic-bezier(0.2, 0.9, 0.4, 1.1), opacity .3s ease;
+}
+.search-modal.active .modal-content {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* ===== 搜索栏布局 ===== */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.engine-trigger-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-color, #e9ecef);
+    border-radius: 10px;
+    background: var(--bg-card, #ffffff);
+    color: var(--text-secondary, #6c757d);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    flex-shrink: 0;
+}
+.engine-trigger-btn:hover {
+    border-color: var(--primary-color, #4361ee);
+    color: var(--primary-color, #4361ee);
+}
+.engine-trigger-btn i { font-size: 1rem; }
+
+.search-input {
+    flex: 1;
+    border: 1px solid var(--border-color, #e9ecef);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    background: var(--bg-primary, #ffffff);
+    color: var(--text-primary, #2b2d42);
+    outline: none;
+    transition: border .2s;
+    height: 40px;
+}
+.search-input:focus {
+    border-color: var(--primary-color, #4361ee);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.12);
+}
+.search-submit-btn {
+    padding: 10px 18px;
+    background: var(--primary-color, #4361ee);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: .95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .2s;
+    white-space: nowrap;
+    height: 40px;
+}
+.search-submit-btn:hover { background: var(--secondary-color, #3a0ca3); }
+
+/* ===== 引擎下拉：定位到触发按钮正下方 =====
+   原理：.modal-content 带 transform，成为绝对定位后代的包含块，
+        其 padding box 即为定位基准。按钮位于 (20px, 16px)，
+        尺寸 40×40，故 bottom = 56px；下拉 top = 62px（多 6px 间距）。
+        仅修改 top / left 两处，其他属性完全不变。 */
+.engine-dropdown {
+    position: absolute;
+    top: 62px;                 /* 16（padding-top）+ 40（按钮高度）+ 6（间距） */
+    left: 20px;                /* 与按钮左边缘对齐 */
+    width: 180px;
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 10001;
+    max-height: 220px;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px) scale(.96);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    pointer-events: none;
+    scrollbar-width: none;
+}
+.engine-dropdown::-webkit-scrollbar { display: none; }
+.engine-dropdown.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+.engine-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    font-size: .9rem;
+    color: var(--text-primary, #2b2d42);
+    cursor: pointer;
+    transition: background .15s;
+    border-radius: 6px;
+}
+.engine-dropdown-item:hover { background: var(--bg-secondary, #f8f9fa); }
+.engine-dropdown-item.active {
+    background: rgba(67,97,238,.08);
+    color: var(--primary-color, #4361ee);
+    font-weight: 500;
+}
+.engine-dropdown-item i {
+    width: 20px;
+    text-align: center;
+    font-size: .95rem;
+    color: var(--text-secondary, #6c757d);
+}
+
+/* ===== 搜索建议 ===== */
+.suggestions {
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 10px;
+    margin: 8px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .15s, visibility .15s;
+    background: var(--bg-card, #ffffff);
+    scrollbar-width: none;
+}
+.suggestions::-webkit-scrollbar { display: none; }
+.suggestions.active {
+    visibility: visible;
+    opacity: 1;
+}
+.suggestion-item {
+    padding: 10px 14px;
+    font-size: .9rem;
+    color: var(--text-primary, #2b2d42);
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color, #e9ecef);
+    transition: background .15s;
+}
+.suggestion-item:last-child { border-bottom: none; }
+.suggestion-item:hover { background: var(--bg-secondary, #f8f9fa); }
+
+/* ===== 历史记录 ===== */
+.history-panel {
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: var(--bg-secondary, #f8f9fa);
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.history-panel::-webkit-scrollbar { display: none; }
+.history-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--text-secondary, #6c757d);
+    margin-bottom: 6px;
+}
+.clear-history-btn {
+    cursor: pointer;
+    color: var(--primary-color, #4361ee);
+    font-size: .8rem;
+    transition: opacity .2s;
+}
+.clear-history-btn:hover { opacity: .8; }
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: .9rem;
+    color: var(--text-primary, #2b2d42);
+    transition: background .1s;
+}
+.history-item:hover { background: rgba(0,0,0,.04); }
+.history-text { flex: 1; overflow: hidden; text-overflow: ellipsis; }
+.delete-history {
+    color: var(--text-secondary, #6c757d);
+    padding: 4px;
+    border-radius: 4px;
+    transition: color .15s, background .15s;
+}
+.delete-history:hover {
+    color: var(--error-color, #ef4444);
+    background: rgba(239,68,68,.1);
+}
+.history-empty {
+    text-align: center;
+    color: var(--text-secondary, #6c757d);
+    font-size: .85rem;
+    padding: 12px 0;
+    margin: 0;
+}
+
+/* ===== 移动端适配：左右间距与主页一致；同步调整下拉定位以匹配按钮位置 ===== */
+@media (max-width: 768px) {
+    .search-modal {
+        padding: 60px var(--container-padding-xs, 16px) var(--container-padding-xs, 16px);
+    }
+    .search-modal .modal-content {
+        max-width: 100%;
+        padding: 14px 16px;
+        border-radius: 10px;
+    }
+    .search-input { height: 36px; font-size: .95rem; padding: 8px 12px; }
+    .search-submit-btn { height: 36px; padding: 8px 14px; font-size: .9rem; }
+    .engine-trigger-btn { width: 36px; height: 36px; }
+    .engine-dropdown {
+        width: 160px;
+        top: 56px;             /* 14（padding-top）+ 36（按钮高度）+ 6（间距） */
+        left: 16px;            /* 与按钮左边缘对齐 */
+    }
+}
+
+/* ===== 深色模式 ===== */
+.dark-mode .search-modal .modal-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+.dark-mode .search-input {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+.dark-mode .search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67,97,238,.2);
+}
+.dark-mode .engine-trigger-btn {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+.dark-mode .engine-trigger-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+.dark-mode .search-submit-btn { background: var(--primary-color); }
+.dark-mode .search-submit-btn:hover { background: var(--secondary-color); }
+.dark-mode .engine-dropdown {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+}
+.dark-mode .engine-dropdown-item { color: var(--text-primary); }
+.dark-mode .engine-dropdown-item:hover { background: var(--bg-secondary); }
+.dark-mode .engine-dropdown-item.active {
+    background: rgba(67,97,238,.2);
+    color: var(--primary-color);
+}
+.dark-mode .engine-dropdown-item i { color: var(--text-secondary); }
+.dark-mode .suggestions {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+.dark-mode .suggestion-item {
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
+}
+.dark-mode .suggestion-item:hover { background: var(--bg-secondary); }
+.dark-mode .history-panel { background: var(--bg-secondary); }
+.dark-mode .history-title { color: var(--text-secondary); }
+.dark-mode .clear-history-btn { color: var(--primary-color); }
+.dark-mode .history-item { color: var(--text-primary); }
+.dark-mode .history-item:hover { background: rgba(255,255,255,.08); }
+.dark-mode .delete-history { color: var(--text-secondary); }
+.dark-mode .delete-history:hover {
+    color: #f87171;
+    background: rgba(239,68,68,.2);
+}
+.dark-mode .history-empty { color: var(--text-secondary); }

@@ -1,0 +1,222 @@
+/* announcement.css - 精简版（公告模态框移动端间距修复） */
+.announcement-modal-simple {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: transparent;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.announcement-modal-simple.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.announcement-modal-container {
+    width: 100%;
+    max-width: 480px;
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    overflow: hidden;
+    transform: scale(.95);
+    opacity: 0;
+    transition: transform .3s ease, opacity .3s ease;
+    margin: auto 0; /* 垂直居中 */
+}
+.announcement-modal-simple.active .announcement-modal-container {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.announcement-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px 8px;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    color: var(--text-primary, #1e293b);
+}
+.announcement-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0;
+}
+.announcement-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.05);
+    border: none;
+    color: var(--text-secondary, #64748b);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .2s;
+}
+.announcement-close:hover {
+    background: rgba(0,0,0,.1);
+    color: var(--text-primary, #334155);
+}
+
+.announcement-body {
+    padding: 16px 20px 12px;
+    display: flex;
+    flex-direction: column;
+    max-height: 350px;
+}
+.focus-section {
+    background: #fff0f0;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+.focus-content {
+    color: #dc2626;
+    font-size: .85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.updates-section {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 8px;
+}
+.updates-section::-webkit-scrollbar { display: none; }
+.updates-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary, #1e293b);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.updates-title i { color: #10b981; font-size: 13px; }
+.announcement-full-content {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary, #475569);
+    margin: 0;
+    padding: 0;
+}
+
+.announcement-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px 16px;
+    background: transparent;
+    border-top: 1px solid var(--border-color, #e0e0e0);
+}
+.announcement-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-secondary, #6c757d);
+    font-size: .78rem;
+}
+.announcement-ack-btn {
+    background: var(--primary-color, #4361ee);
+    border: none;
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 5px 18px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background .2s, box-shadow .2s;
+    box-shadow: 0 2px 8px rgba(67,97,238,.2);
+}
+.announcement-ack-btn:hover {
+    background: #3651d4;
+    box-shadow: 0 4px 12px rgba(67,97,238,.3);
+}
+
+/* 移动端：左右间距与主页一致 */
+@media (max-width: 768px) {
+    .announcement-modal-simple {
+        padding-left: var(--container-padding-xs, 16px);
+        padding-right: var(--container-padding-xs, 16px);
+        padding-top: calc(60px + var(--container-padding-xs, 16px));
+        padding-bottom: var(--container-padding-xs, 16px);
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .announcement-modal-container {
+        max-width: 100%;
+        margin: auto 0;
+        border-radius: 8px;
+    }
+}
+
+/* 响应式 */
+@media (max-width:600px) {
+    .announcement-header { padding: 8px 12px 6px; }
+    .announcement-title { font-size: 1rem; }
+    .announcement-body { padding: 14px 18px 10px; }
+    .focus-content { font-size: .8rem; }
+    .announcement-footer { padding: 10px 18px 14px; }
+    .announcement-date { font-size: .73rem; }
+    .announcement-ack-btn { padding: 4px 14px; font-size: .78rem; }
+}
+@media (max-width:400px) {
+    .announcement-modal-container { border-radius: 6px; }
+    .announcement-header { padding: 6px 10px 4px; }
+    .announcement-body { padding: 12px 14px 8px; }
+    .focus-content { font-size: .78rem; }
+}
+@media (prefers-reduced-motion:reduce) {
+    .announcement-modal-simple,
+    .announcement-modal-container,
+    .announcement-close,
+    .announcement-ack-btn { transition: none !important; }
+    .announcement-modal-container { transform: scale(1); }
+    .announcement-modal-simple.active .announcement-modal-container { transform: scale(1); }
+}
+
+/* 深色模式 */
+.dark-mode .announcement-modal-container {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: 0 8px 32px rgba(0,0,0,.3);
+}
+.dark-mode .announcement-header {
+    border-bottom-color: rgba(255,255,255,.08);
+    color: var(--text-primary);
+}
+.dark-mode .announcement-close {
+    background: rgba(255,255,255,.08);
+    color: var(--text-secondary);
+}
+.dark-mode .announcement-close:hover {
+    background: rgba(255,255,255,.15);
+    color: var(--text-primary);
+}
+.dark-mode .focus-section { background: rgba(220,38,38,.15); }
+.dark-mode .focus-content { color: #f87171; }
+.dark-mode .updates-title { color: var(--text-primary); }
+.dark-mode .updates-title i { color: #34d399; }
+.dark-mode .announcement-full-content { color: var(--text-secondary); }
+.dark-mode .announcement-footer { border-top-color: var(--border-color); }
+.dark-mode .announcement-date { color: var(--text-secondary); }
+.dark-mode .announcement-ack-btn { background: var(--primary-color); }
+.dark-mode .announcement-ack-btn:hover { background: #5a7aff; }
