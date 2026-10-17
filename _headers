@@ -1,0 +1,35 @@
+# ===== 全局安全头 =====
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# ===== 首页不缓存 =====
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# ===== 静态资源缓存策略 =====
+# 图片等媒体资源（强缓存 1 年，不可变）
+/assets/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS 文件（缓存 1 小时）
+/css/*.css
+  Cache-Control: public, max-age=3600
+
+# JS 文件（缓存 1 小时）
+/js/*.js
+  Cache-Control: public, max-age=3600
+
+# 第三方 CDN 资源（由 CDN 管理，不覆盖）
