@@ -1,0 +1,383 @@
+/* responsive.css - 精简版（合并重复媒体查询） */
+@media (min-width: 1600px) {
+    .container, .nav-container, .greeting-container, .footer-compact-container { max-width: 1400px; }
+    .tags-grid { grid-template-columns: repeat(10, 1fr); gap: 12px; }
+    .minimal-tag { padding: 12px 16px; min-height: 52px; }
+    .tag-label { font-size: 14px; }
+    .navigation-left { width: 160px; }
+    .navigation-middle { width: 180px; }
+    .level3-content { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .tags-grid { grid-template-columns: repeat(8, 1fr); gap: 12px; }
+    .minimal-tag { padding: 12px 16px; min-height: 50px; }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tags-grid { grid-template-columns: repeat(7, 1fr); gap: 10px; }
+    .minimal-tag { padding: 10px 14px; min-height: 46px; }
+    .navigation-left, .navigation-middle { width: 130px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navigation-body { flex-direction: column; }
+    .navigation-left, .navigation-middle {
+        width: 100%; border-right: none; border-bottom: 1px solid var(--border-color);
+    }
+    .level1-nav, .level2-nav {
+        flex-direction: row; overflow-x: auto; white-space: nowrap; padding: 0; display: flex;
+    }
+    .level1-btn, .level2-btn {
+        flex: 0 0 auto; padding: 0 16px; border-right: 1px solid var(--border-color); border-bottom: none;
+    }
+    .level3-content { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+    .tags-grid { grid-template-columns: repeat(6, 1fr); gap: 10px; }
+    .minimal-tag { padding: 8px 12px; min-height: 42px; }
+    .tag-label { font-size: 12px; }
+    .footer-stats-cards { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .navigation-body { flex-direction: column; }
+    .navigation-left, .navigation-middle {
+        width: 100%; border-right: none; border-bottom: 1px solid var(--border-color);
+    }
+    .level1-nav, .level2-nav {
+        flex-direction: row; overflow-x: auto; white-space: nowrap; padding: 0;
+    }
+    .level1-btn, .level2-btn {
+        flex: 0 0 auto; padding: 0 14px; border-right: 1px solid var(--border-color);
+        border-bottom: none; font-size: 12px;
+    }
+    .level3-content { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+    .site-card { min-height: 100px; padding: 8px; }
+    .icon-container { width: 32px; height: 32px; }
+    .views-icon { font-size: 12px; }
+    .view-count, .site-title { font-size: 12px; }
+    .site-description { font-size: 10px; }
+    .tags-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .minimal-tag { padding: 8px 12px; min-height: 40px; }
+    .tag-label { font-size: 11px; }
+    .greeting-container { flex-direction: column; }
+    .greeting-main-card { width: 100%; }
+    .bookmark-btn { width: 100%; flex-direction: row; justify-content: center; gap: 8px; padding: 12px; }
+    .bookmark-btn span { writing-mode: horizontal-tb; }
+    .footer-stats-cards { grid-template-columns: repeat(2, 1fr); }
+    .sidebar { width: 70vw; max-width: 280px; }
+}
+
+@media (max-width: 575px) {
+    .navigation-body { flex-direction: column; }
+    .navigation-left, .navigation-middle {
+        width: 100%; border-right: none; border-bottom: 1px solid var(--border-color);
+    }
+    .level1-nav, .level2-nav {
+        flex-direction: row; overflow-x: auto; white-space: nowrap; padding: 0;
+    }
+    .level1-btn, .level2-btn {
+        flex: 0 0 auto; padding: 0 12px; border-right: 1px solid var(--border-color);
+        border-bottom: none; font-size: 11px; height: 36px; min-height: 36px;
+    }
+    .level3-content {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 6px; padding: 8px;
+    }
+    .site-card { min-height: 90px; padding: 6px; }
+    .icon-container { width: 28px; height: 28px; }
+    .views-icon { font-size: 11px; }
+    .view-count, .site-title { font-size: 11px; }
+    .site-description { font-size: 9px; }
+    .tags-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .minimal-tag { padding: 6px 10px; min-height: 36px; }
+    .tag-label { font-size: 10px; }
+    .tag-icon { font-size: 12px; }
+    .greeting-container { flex-direction: column; }
+    .greeting-main-card { width: 100%; padding: 12px; }
+    .greeting-text h1 { font-size: 1.1rem; }
+    .datetime { padding: 6px 10px; min-width: 100px; }
+    #currentTime { font-size: 0.9rem; }
+    #currentDate { font-size: 0.7rem; }
+    .fish-section { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .fish-btn { padding: 6px 8px; min-height: 40px; }
+    .fish-btn i { font-size: 14px; }
+    .fish-count { font-size: 0.8rem; }
+    .bookmark-btn { width: 100%; flex-direction: row; justify-content: center; gap: 8px; padding: 10px; }
+    .bookmark-btn span { writing-mode: horizontal-tb; }
+    .footer-stats-cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .stat-card { padding: 8px; }
+    .stat-number { font-size: 13px; }
+    .stat-name { font-size: 9px; }
+    .sidebar { width: 70vw; max-width: 280px; }
+    .sidebar-wallpaper-avatar { width: 42px; height: 42px; }
+    .sidebar-wallpaper-nickname { font-size: 14px; }
+    .sidebar-wallpaper-signature { font-size: 10px; }
+    .daily-quote-card p { font-size: 11px; }
+    .music-player { left: 12px; right: 12px; width: auto; max-width: none; bottom: 12px; }
+}
+
+/* ===== 移动端模态框间距（键盘适配） ===== */
+@media (max-width: 768px) {
+    .feedback-modal,
+    #notebookModal,
+    #rankModal,
+    #partnerModal,
+    #commentModal,
+    #submitModal {
+        padding: 60px var(--container-padding-xs, 16px) var(--container-padding-xs, 16px) !important;
+        align-items: flex-start !important;
+    }
+    .feedback-modal-content,
+    #notebookModal .feedback-modal-content,
+    #rankModal .feedback-modal-content,
+    #partnerModal .feedback-modal-content,
+    #commentModal .feedback-modal-content,
+    #submitModal .feedback-modal-content {
+        max-width: 100% !important;
+        max-height: calc(100vh - 60px - 2 * var(--container-padding-xs, 16px)) !important;
+        margin: auto 0 !important;
+        border-radius: 8px !important;
+    }
+    .feedback-modal-body {
+        max-height: calc(100vh - 60px - 2 * var(--container-padding-xs, 16px) - 60px) !important;
+    }
+    .announcement-modal-simple {
+        padding: 60px var(--container-padding-xs, 16px) var(--container-padding-xs, 16px) !important;
+        align-items: flex-start !important;
+    }
+    .announcement-modal-container {
+        max-width: 100% !important;
+        max-height: calc(100vh - 60px - 2 * var(--container-padding-xs, 16px)) !important;
+        margin: auto 0 !important;
+    }
+    .weather-modal-card {
+        padding: 60px var(--container-padding-xs, 16px) var(--container-padding-xs, 16px) !important;
+        align-items: flex-start !important;
+    }
+    .weather-modal-content {
+        max-width: 100% !important;
+        max-height: calc(100vh - 60px - 2 * var(--container-padding-xs, 16px)) !important;
+        margin: auto 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback-modal,
+    #notebookModal,
+    #rankModal,
+    #partnerModal,
+    #commentModal,
+    #submitModal,
+    .announcement-modal-simple,
+    .weather-modal-card {
+        padding: 56px var(--container-padding-xs, 16px) var(--container-padding-xs, 16px) !important;
+    }
+}
+
+/* ===== 超小屏 ===== */
+@media (max-width: 374px) {
+    .tags-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .minimal-tag { padding: 5px 8px; }
+    .tag-label { font-size: 9px; }
+    .level3-content { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
+    .site-title { font-size: 10px; }
+    .site-description { display: none; }
+    .greeting-text h1 { font-size: 1rem; }
+    .countdown-holiday { font-size: 0.7rem; }
+    #holidayCountdown { font-size: 0.7rem; padding: 2px 6px; }
+    .fish-section { gap: 4px; }
+    .fish-btn { padding: 4px 6px; min-height: 36px; }
+    .fish-btn i { font-size: 12px; }
+    .fish-count { font-size: 0.7rem; }
+    .footer-stats-cards { gap: 6px; }
+    .stat-card { padding: 6px; }
+    .stat-number { font-size: 12px; }
+}
+
+/* ===== 横屏手机 ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+    .sidebar { top: 60px !important; bottom: 10px; max-height: calc(100vh - 70px); }
+    .sidebar-wallpaper { aspect-ratio: 21/9; }
+    .daily-quote-card { display: none; }
+    .sidebar-categories { max-height: calc(100vh - 200px); }
+    .wallpaper-container { height: 30vh; min-height: 120px; }
+    .level1-nav, .level2-nav { max-height: 40px; }
+    .level1-btn, .level2-btn { height: 36px; line-height: 36px; }
+    .music-player { max-height: 85vh; overflow-y: auto; }
+    .bottom-section { max-height: 300px; }
+}
+
+/* ===== 触屏设备 ===== */
+@media (hover: none) and (pointer: coarse) {
+    .nav-btn, .floating-btn, .footer-btn, .level1-btn, .level2-btn,
+    .site-card, .minimal-tag, .category-item, .song-item, .search-download-btn {
+        cursor: default;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .site-card:active { transform: scale(0.98); }
+    .minimal-tag:active { transform: scale(0.97); }
+}
+
+/* ===== 减少动画 ===== */
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    .carousel-track, .progress, .progress-handle, .toast-item { transition: none !important; }
+    .album-cover.playing img { animation: none !important; }
+    .fish-effect { animation: none !important; }
+}
+
+/* ===== 打印 ===== */
+@media print {
+    .navbar, .sidebar, .floating-buttons, .music-player,
+    .feedback-modal, .search-modal, .engine-tooltip, .footer {
+        display: none !important;
+    }
+    body { background: white; color: black; font-size: 12pt; }
+    .main-content { margin: 0; padding: 0; }
+    .container { width: 100%; max-width: none; padding: 0; }
+    .site-card { break-inside: avoid; page-break-inside: avoid; }
+    a { text-decoration: none; color: black; }
+    a[href]:after { content: " (" attr(href) ")"; font-size: 10pt; }
+}
+
+/* ============================================================
+   ⭐ 星聚笔记 / 访问排行榜 模态框：适配移动端浏览器底部工具栏
+   ------------------------------------------------------------
+   1. 使用动态视口高度 100dvh，随工具栏显示/隐藏自动调整；
+   2. 通过 env(safe-area-inset-bottom) 预留 iPhone 安全区；
+   3. 通过 --browser-bottom-inset 变量（由 keyboard-adapter.js
+      用 visualViewport API 实时计算）精确扣除底部工具栏高度，
+      覆盖 Android Chrome / 微信 / iOS Safari 等场景。
+   注：本段仅作用于 #notebookModal 与 #rankModal，其他模块样式保持不变。
+   ============================================================ */
+
+/* ---------- 星聚笔记 ---------- */
+#notebookModal {
+    /* 高度改用动态视口；不支持 dvh 的浏览器回退到 100vh */
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    /* 取消 inset:0 里隐含的 bottom:0，避免与固定高度冲突 */
+    bottom: auto;
+}
+
+#notebookModal .feedback-modal-content {
+    /* 桌面端兜底：视口高度 - 顶部 60 - 底部留白 - 安全区 - 工具栏 */
+    max-height: calc(
+        100vh
+        - 60px
+        - 2 * var(--container-padding-xs, 16px)
+        - env(safe-area-inset-bottom, 0px)
+        - var(--browser-bottom-inset, 0px)
+    );
+    max-height: calc(
+        100dvh
+        - 60px
+        - 2 * var(--container-padding-xs, 16px)
+        - env(safe-area-inset-bottom, 0px)
+        - var(--browser-bottom-inset, 0px)
+    );
+}
+
+@media (max-width: 768px) {
+    #notebookModal .feedback-modal-content {
+        max-height: calc(
+            100vh
+            - 60px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+        max-height: calc(
+            100dvh
+            - 60px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #notebookModal .feedback-modal-content {
+        max-height: calc(
+            100vh
+            - 56px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+        max-height: calc(
+            100dvh
+            - 56px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+    }
+}
+
+/* ---------- 访问排行榜 ---------- */
+#rankModal {
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    bottom: auto;
+}
+
+#rankModal .feedback-modal-content {
+    max-height: calc(
+        100vh
+        - 60px
+        - 2 * var(--container-padding-xs, 16px)
+        - env(safe-area-inset-bottom, 0px)
+        - var(--browser-bottom-inset, 0px)
+    );
+    max-height: calc(
+        100dvh
+        - 60px
+        - 2 * var(--container-padding-xs, 16px)
+        - env(safe-area-inset-bottom, 0px)
+        - var(--browser-bottom-inset, 0px)
+    );
+}
+
+@media (max-width: 768px) {
+    #rankModal .feedback-modal-content {
+        max-height: calc(
+            100vh
+            - 60px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+        max-height: calc(
+            100dvh
+            - 60px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #rankModal .feedback-modal-content {
+        max-height: calc(
+            100vh
+            - 56px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+        max-height: calc(
+            100dvh
+            - 56px
+            - 2 * var(--container-padding-xs, 16px)
+            - env(safe-area-inset-bottom, 0px)
+            - var(--browser-bottom-inset, 0px)
+        ) !important;
+    }
+}
