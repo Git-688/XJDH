@@ -63,7 +63,7 @@
 
 ## 📁 目录结构
 ```
-XLDH/
+XJDH/
 ├── index.html                 # 主站首页入口
 ├── admin.html                 # 后台管理（独立的 CSP 保护)
 ├── package.json               # 依赖与脚本（构建工具等)
@@ -240,4 +240,4 @@ javascript window.APP_CONFIG={API_BASE:'https://api.xjdh688.ccwu.cc'};
 
 📄 许可证
 
-本项目基于 [MIT](license) License 开源，© 2025-PRESENT 。
+本项目基于 [MIT](LICENSE) License 开源，© 2025-PRESENT Git-689。
