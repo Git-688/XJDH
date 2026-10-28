@@ -38,7 +38,7 @@
 
 ## 🚀 快速部署
 
-> 准备一个免费域名、Cloudflare账号、Netlify（可选）
+> 准备一个免费域名、Cloudflare账号或直接丢给deepseek
 
 1. **Fork 本仓库** 并克隆到本地
 2. 部署前端到 **Cloudflare Pages**（直接连接仓库自动部署）
