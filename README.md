@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./assets/logo.png" alt="星聚导航 Logo" width="100">
   <h1>⭐️ 星聚导航</h1>
-  <p>小白的个人导航（Git开源项目+Cloudflare）</p>
+  <p>一个小白制作的导航（Git开源项目+Cloudflare）</p>
 
   ![GitHub Repo stars](https://img.shields.io/github/stars/Git-689/XJDH?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/Git-689/XJDH?style=social)
