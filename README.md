@@ -156,35 +156,35 @@ javascript window.APP_CONFIG={API_BASE:'https://api.xjdh688.ccwu.cc'};
 <summary><b>📸 点击可收起/展开所有效果图</b>（共 10 张）</summary>
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 10px 0;">
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/网站主页.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/网站主页.webp" alt="主页" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/主页.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/主页.webp" alt="主页" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/分类导航.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/分类导航.webp" alt="分类导航" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/页脚.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/页脚.webp" alt="页脚" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/网站页脚.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/网站页脚.webp" alt="网站页脚" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/排行榜.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/排行榜.webp" alt="排行榜" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/侧滑栏.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/侧滑栏.webp" alt="侧滑栏" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/评论.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/评论.webp" alt="评论区" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/内部音乐.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/内部音乐.webp" alt="内部音乐" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/天气.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/天气.webp" alt="天气预报" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/排行榜.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/排行榜.webp" alt="排行榜" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/悬浮音乐.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/悬浮音乐.webp" alt="悬浮音乐" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/评论系统.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/评论系统.webp" alt="评论系统" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/侧滑栏.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/侧滑栏.webp" alt="侧滑栏" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/天气预报.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/天气预报.webp" alt="天气预报" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/笔记.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/笔记.webp" alt="笔记本" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/网站投稿.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/网站投稿.webp" alt="网站投稿" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/关于.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/关于.webp" alt="关于网站" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
-  <a href="https://tc688.ccwu.cc/file/星聚导航/zstp/关于网站.webp" target="_blank">
-    <img src="https://tc688.ccwu.cc/file/星聚导航/zstp/关于网站.webp" alt="关于网站" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="https://tc688.ccwu.cc/file/XJDH/后台管理.webp" target="_blank">
+    <img src="https://tc688.ccwu.cc/file/XJDH/后台管理.webp" alt="后台管理" width="18%" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </a>
 </div>
 
